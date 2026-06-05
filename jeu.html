@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Game – Évasion de la classe</title>
+  <link rel="stylesheet" href="jeu.css">
+</head>
+<body>
+<div class="game-container">
+  <div class="game-header">
+    <div class="timer">⏱️ Temps : <span id="timer">05:00</span></div>
+    <div class="status" id="status">🔍 Explorez la classe...</div>
+    <button id="resetBtn">🔄 Recommencer</button>
+  </div>
+
+  <div class="room" id="room">
+    <div class="object desk" id="desk"><span>📚</span><div class="object-label">Table</div></div>
+    <div class="object bag" id="bag"><span>🎒</span><div class="object-label">Sac</div></div>
+    <div class="object blackboard" id="blackboard"><span>📝</span><div class="object-label">Tableau</div></div>
+    <div class="object bookshelf" id="bookshelf"><span>📖</span><div class="object-label">Bibliothèque</div></div>
+    <div class="object globe" id="globe"><span>🌍</span><div class="object-label">Globe</div></div>
+    <div class="object trash" id="trash"><span>🗑️</span><div class="object-label">Corbeille</div></div>
+    <div class="object door" id="door"><span>🚪</span><div class="object-label">Porte (fermée)</div></div>
+  </div>
+
+  <div class="clues-panel">
+    <h3>📜 Indices découverts :</h3>
+    <ul id="cluesList"><li><em>Aucun indice pour l'instant.</em></li></ul>
+  </div>
+
+  <div class="code-panel">
+    <label>🔐 Code secret (4 chiffres) :</label>
+    <input type="text" id="codeInput" maxlength="4" placeholder="____">
+    <button id="verifyBtn">✅ Vérifier</button>
+    <div id="codeMessage" class="code-message"></div>
+  </div>
+</div>
+<script src="jeu.js"></script>
+</body>
+</html>
